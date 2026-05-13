@@ -3,11 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body{
+            text-align: center;
+            background-color: pink;
+         }
+         
+        .box{
+background-color: white;
+width: 200px;
+margin: auto;
+
+padding: 20px;
+border-radius: 20px;
+        }
+        .btn{
+            padding: 5px 10px;
+            background: red;
+            border-radius: 10px;
+            color: white;
+            font-weight: 900;
+            font-size: 25px;
+            
+        }
+        .reset{
+            padding: 5px 10px;
+             background: rgb(92, 148, 201);
+            border-radius: 10px;
+            color: white;
+            font-weight: 900;
+            font-size: 25px;
+            
+        }
+        p{
+            font-size: 25px;
+            font-weight: 900;
+        }
+        
+    </style>
     <title>Document</title>
+
 </head>
 <body>
-    <script>
-        
-    </script>
+    <div class="box">
+        <p id="count">0</p>
+        <button onclick="sub()"  class="btn">-</button>
+        <button onclick="reset()" class="reset">Reset</button>
+        <button onclick="add()"  class="btn">+</button>
+
+    </div>
+
+
+<script>
+let count=0
+let output=document.getElementById("count")
+function add() {
+    count=count+1
+    output.textContent=count
+}
+
+function sub() {
+    count= count-1
+    output.textContent=count
+
+}
+ function reset() {
+    count=0
+    output.textContent=count
+ }
+
+</script>
+
+
 </body>
 </html>
